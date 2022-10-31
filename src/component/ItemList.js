@@ -9,6 +9,8 @@ export default function ItemList({ list }) {
         <Grid.Row>
           { list.map((item) => (
             <Grid.Column key={item.id}>
+              <Link href={`/view/${item.id} `}>
+              {/* <a> */}
               <div className={styles.wrap}>
                 <img
                   src={item.image_link}
@@ -21,6 +23,8 @@ export default function ItemList({ list }) {
                 </span>
                 <strong className={styles.num_price}>${item.price}</strong>
               </div>
+              {/* </a> */}
+              </Link>
             </Grid.Column>
           ))}
         </Grid.Row>
